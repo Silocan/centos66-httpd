@@ -18,8 +18,8 @@ RUN grep -q -F 'Include "/conf.d/vhosts/*.conf"' /etc/httpd/conf/httpd.conf  || 
 VOLUME /var/www/html
 VOLUME /etc/httpd/conf.d/vhosts
 
-#
 COPY run.sh /
 COPY conf/template.conf /tmp
-#
+
+# Entrypoint
 CMD /bin/sh /run.sh
