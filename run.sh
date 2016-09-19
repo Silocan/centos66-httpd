@@ -8,6 +8,7 @@ echo "WWW : ${WWW}"
 echo ""
 
 echo "=> Initialisation du vhost"
+mkdir /etc/httpd/conf.d/vhosts
 sed -i.bak s/'${APP_ENV}'/"${APP_ENV}"/g /tmp/template.conf
 sed -i.bak s/'${PORT}'/"${PORT}"/g /tmp/template.conf
 sed -i.bak s/'${VHOST}'/"${VHOST}"/g /tmp/template.conf
