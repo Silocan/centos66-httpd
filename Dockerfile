@@ -12,7 +12,7 @@ RUN cd /tmp; wget wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-
 RUN yum -y install php-mcrypt; yum clean all;
 
 RUN mkdir /etc/httpd/conf.d/vhosts
-RUN grep -q -F 'Include "/conf.d/vhosts/*.conf"' /etc/httpd/conf/httpd.conf  || echo 'Include "/conf.d/vhosts/*.conf"' >> /etc/httpd/conf/httpd.conf
+RUN grep -q -F 'Include "conf.d/vhosts/*.conf"' /etc/httpd/conf/httpd.conf  || echo 'Include "conf.d/vhosts/*.conf"' >> /etc/httpd/conf/httpd.conf
 
 VOLUME /var/www/html
 VOLUME /etc/httpd/conf.d/vhosts
