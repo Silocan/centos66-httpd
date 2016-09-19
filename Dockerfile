@@ -17,6 +17,7 @@ RUN grep -q -F 'Include "conf.d/vhosts/*.conf"' /etc/httpd/conf/httpd.conf  || e
 VOLUME /var/www/html
 VOLUME /etc/httpd/conf.d/vhosts
 
+# Copy script
 COPY conf/template.conf /tmp
 COPY run.sh /
 
